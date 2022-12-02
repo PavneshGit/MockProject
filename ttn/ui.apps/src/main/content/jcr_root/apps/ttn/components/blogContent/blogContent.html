@@ -1,0 +1,17 @@
+<sly data-sly-use.model="com.ttn.core.models.BlogAbout">
+    <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @ categories='ttn.mock'}"></sly>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+                <div class="blog-post">
+                    <p>This blog post: ${properties.richtextbox @context='html'}</p>
+                </div>
+
+            </div><!-- /.blog-main -->
+        </div><!-- /.row -->
+    </main><!-- /.container -->
+
+
+</sly>

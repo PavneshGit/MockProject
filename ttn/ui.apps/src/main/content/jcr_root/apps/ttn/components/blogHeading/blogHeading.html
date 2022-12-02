@@ -1,0 +1,16 @@
+<sly data-sly-use.model="com.ttn.core.models.BlogHeading">
+    <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @ categories='ttn.mock'}"></sly>
+
+
+    <div class="row">
+        <div class="col-md-8 blog-main">
+
+            <div class="blog-post">
+                <h2 class="blog-post-title">${model.sampleBlogPost}</h2>
+                <p class="blog-post-meta">${model.blogPostDate} by <a href=" #">${model.blogPostBy}</a></p>
+            </div>
+        </div>
+    </div>
+
+</sly>

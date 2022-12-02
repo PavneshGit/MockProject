@@ -1,0 +1,26 @@
+<sly data-sly-use.model="com.ttn.core.models.ListOfBlogsModel">
+    <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @ categories='ttn.mock'}"></sly>
+<div class="container">
+    <div class="row mb-2">
+        <sly data-sly-list="${model.listOfBlogsItemList}">
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-400">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <img class="card-img-right flex-auto d-none d-lg-block" src="${item.thumbnail}" style="height:200px ; width:250px" alt="Card image cap">
+                        <strong class="d-inline-block mb-2 text-success">${item.blogMainHeading}</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="${properties.linkRead1}.html">${item.postTitle}</a>
+                        </h3>
+                        <div class="mb-1 text-muted">${item.postDate}</div>
+                        <p class="card-text mb-auto"> ${item.postDesc}</p>
+                        <a href="${properties.linkRead2}.html">Continue Reading</a>
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
+</div>
+
+
+</sly>

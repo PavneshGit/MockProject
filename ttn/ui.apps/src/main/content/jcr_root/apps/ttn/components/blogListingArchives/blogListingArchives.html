@@ -1,0 +1,9 @@
+     <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @ categories='ttn.mock'}"></sly>
+    <div class="p-3">
+        <h4 class="font-italic">${properties.archives}</h4>
+        <ol class="list-unstyled mb-0" data-sly-list="${currentPage.listChildren}">
+            <li><a href="${item.path}.html">${item.title}</a></li>
+        </ol>
+    </div>
+</sly>

@@ -1,0 +1,25 @@
+<sly data-sly-use.footer="com.ttn.core.models.HomeFooter">
+    <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @ categories='ttn.mock'}"></sly>
+
+
+    <p class="align-center">
+        <a href="${properties.linkBackTop}.html">${footer.backtotop}</a>
+    </p>
+
+    <footer class="blog-footer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 ">
+                <div class="footer__block">
+                    <a target="" href="${properties.linkHomePage}.html" aria-label="PwC office locations">${footer.homepage}</a></t>
+                    <a target="" href="${properties.linkBlogs}.html" aria-label="PwC office locations">${footer.blogs}</a>
+                    <a target="" href="${properties.linkBlogPage}.html" aria-label="PwC office locations">BlogPage</a>
+
+                </div>
+            </div>
+        </div>
+        <p> ${footer.copyright}</p>
+    </footer>
+
+
+</sly>
